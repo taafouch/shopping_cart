@@ -1,22 +1,8 @@
 # Shopping Cart Project
 
-This project implements a simple shopping cart system in Python, allowing users to manage items, their quantities, and prices in a virtual shopping cart.
+## Overview
 
-## Project Structure
-
-```
-shopping_cart/
-│
-├── shopping_cart/
-│   ├── __init__.py
-│   └── cart.py
-│
-├── tests/
-│   └── test_shopping_cart.py
-│
-├── README.md
-└── requirements.txt
-```
+The Shopping Cart Project is a Python-based utility that implements a simple shopping cart system. It allows users to manage items, their quantities, and prices in a virtual shopping cart. The project provides both a user-friendly class interface and a comprehensive test suite to ensure reliability.
 
 ## Features
 
@@ -26,29 +12,30 @@ shopping_cart/
 - Calculate the total number of items in the cart
 - Calculate the total price of all items in the cart
 - String representation of the cart contents
+- Comprehensive test suite using pytest
+- Prices are float values with two decimal places
+- Error handling for invalid inputs
 
 ## Installation
 
-1. Clone this repository:
+1. Clone or download this repository to your local machine.
+2. Navigate to the project directory:
    ```
-   git clone https://github.com/yourusername/shopping-cart.git
    cd shopping-cart
    ```
-
-2. (Optional) Create and activate a virtual environment:
+3. (Optional) Create and activate a virtual environment:
    ```
    python -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
    ```
-
-3. Install the required packages:
+4. Install the required packages:
    ```
    pip install -r requirements.txt
    ```
 
 ## Usage
 
-Here's a basic example of how to use the ShoppingCart class:
+### Using the ShoppingCart class
 
 ```python
 from shopping_cart.cart import ShoppingCart
@@ -76,18 +63,77 @@ cart.remove_item("apple", 1)
 print(cart)
 ```
 
-## Running Tests
+### Running Tests
 
-To run the tests, make sure you have pytest installed and then run:
+To run the unit tests:
+
+1. Ensure you have pytest installed:
+   ```
+   pip install pytest
+   ```
+
+2. Navigate to the project's root directory.
+
+3. Run the tests using:
+   ```
+   pytest tests/test_shopping_cart.py
+   ```
+
+## Development
+
+### Prerequisites
+
+- Python 3.6 or later
+- pytest for running tests
+
+### Project Structure
 
 ```
-pytest tests/test_shopping_cart.py
+shopping_cart/
+│
+├── src/
+│   └── shopping_cart/
+│       ├── __init__.py
+│       └── cart.py
+│
+├── tests/
+│   └── test_shopping_cart.py
+│
+├── LICENSE
+├── README.md
+├── requirements.txt
+└── setup.py
 ```
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions to the Shopping Cart Project are welcome! Please feel free to submit a Pull Request.
+
+### Guidelines for contributing:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Write tests for your changes.
+4. Ensure all tests pass before submitting a pull request.
+5. Update the documentation if you're introducing new features or changing functionality.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Python
+- pytest for testing framework
+
+## Support
+
+If you encounter any issues or have questions, please file an issue on the GitHub repository.
+
+## Authors
+
+[Mohamed El Wafi]
+
+---
+
+We hope this project serves as a useful example of implementing a shopping cart system in Python. Happy coding!

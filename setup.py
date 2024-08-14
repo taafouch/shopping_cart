@@ -11,7 +11,7 @@ setup(
     description="A simple shopping cart implementation",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/shopping-cart",
+    url="https://github.com/taafouch/shopping_cart",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
