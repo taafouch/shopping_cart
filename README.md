@@ -83,7 +83,7 @@ To run the unit tests:
 
 ### Prerequisites
 
-- Python 3.6 or later
+- Python 2.7 or 3.6+
 - pytest for running tests
 
 ### Project Structure
