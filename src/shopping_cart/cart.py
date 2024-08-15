@@ -51,9 +51,9 @@ class ShoppingCart(object):
     def __str__(self):
         """Return a string representation of the shopping cart."""
         items_str = "\n".join(
-            "{item_name}: {quantity} x ${price}".format(item_name=name,
-                                                        quantity=item['quantity'],
-                                                        price=item['price'])
+            "{item_name}: {quantity} x ${price:.2f}".format(item_name=name,
+                                                            quantity=item['quantity'],
+                                                            price=item['price'])
             for name, item in six.iteritems(self._items)
         )
-        return "Shopping Cart:\n{item}\nTotal: ${price}".format(item=items_str, price=self.get_total_price())
+        return "Shopping Cart:\n{item}\nTotal: ${price:.2f}".format(item=items_str, price=self.get_total_price())

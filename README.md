@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Shopping Cart Project is a Python-based utility that implements a simple shopping cart system. It allows users to manage items, their quantities, and prices in a virtual shopping cart. The project provides both a user-friendly class interface and a comprehensive test suite to ensure reliability.
+The Shopping Cart Project is a Python-based utility that implements a simple shopping cart system. It allows users to manage items, their quantities, and prices in a virtual shopping cart. The project provides both a user-friendly class interface and a comprehensive test suite to ensure reliability. It is designed to be compatible with both Python 2.7 and Python 3.
 
 ## Features
 
@@ -15,6 +15,7 @@ The Shopping Cart Project is a Python-based utility that implements a simple sho
 - Comprehensive test suite using pytest
 - Prices are float values with two decimal places
 - Error handling for invalid inputs
+- Compatible with Python 2.7 and Python 3
 
 ## Installation
 
@@ -24,10 +25,16 @@ The Shopping Cart Project is a Python-based utility that implements a simple sho
    cd shopping-cart
    ```
 3. (Optional) Create and activate a virtual environment:
-   ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   ```
+   - For Python 2.7:
+     ```
+     virtualenv venv
+     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+     ```
+   - For Python 3:
+     ```
+     python3 -m venv venv
+     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+     ```
 4. Install the required packages:
    ```
    pip install -r requirements.txt
@@ -38,7 +45,7 @@ The Shopping Cart Project is a Python-based utility that implements a simple sho
 ### Using the ShoppingCart class
 
 ```python
-from shopping_cart.cart import ShoppingCart
+from src.shopping_cart.cart import ShoppingCart
 
 # Create a new shopping cart
 cart = ShoppingCart()
@@ -83,13 +90,14 @@ To run the unit tests:
 
 ### Prerequisites
 
-- Python 2.7 or 3.6+
+- Python 2.7 or Python 3.6+
 - pytest for running tests
+- six library for Python 2 and 3 compatibility
 
 ### Project Structure
 
 ```
-shopping_cart/
+shopping-cart/
 │
 ├── src/
 │   └── shopping_cart/
@@ -116,6 +124,7 @@ Contributions to the Shopping Cart Project are welcome! Please feel free to subm
 3. Write tests for your changes.
 4. Ensure all tests pass before submitting a pull request.
 5. Update the documentation if you're introducing new features or changing functionality.
+6. Make sure your changes are compatible with both Python 2.7 and Python 3.
 
 ## License
 
@@ -125,15 +134,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Python
 - pytest for testing framework
+- six library for Python 2 and 3 compatibility
 
 ## Support
 
 If you encounter any issues or have questions, please file an issue on the GitHub repository.
 
-## Authors
+## Author
 
-[Mohamed El Wafi]
+Mohamed EL Wafi
 
 ---
 
-We hope this project serves as a useful example of implementing a shopping cart system in Python. Happy coding!
+We hope this project serves as a useful example of implementing a shopping cart system in Python, demonstrating compatibility between Python 2.7 and Python 3. Happy coding!
